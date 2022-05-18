@@ -39,6 +39,7 @@ def RGA(iterate, arr):
     i = 0
     j = 0
     index = 0
+    answer = []
     while index <= iterate:
         i = (i + 1) % 256
         j = (j + arr[i]) % 256
@@ -46,8 +47,9 @@ def RGA(iterate, arr):
         arr[i] = arr[j]
         arr[j] = temp
         k = arr[(arr[i] + arr[j]) % 256]
+        answer.append(k)
         index += 1
-        return k
+    return answer
 
 def main():
     test = (KSA("test1"))
