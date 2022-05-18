@@ -9,7 +9,7 @@ Key-scheduling algorithm (KSA):
 Used to generate a permutation of S, the sequence of all 256 bytes
 
 Pseudo-random generation algorithm (PRGA):
-Used to output bytes in streamcipher
+Used to output bytes in keycipher
 
 Homework Assignment:
 --------------------
