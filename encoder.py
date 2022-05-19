@@ -5,23 +5,23 @@
 
 import numpy as np
 
-def swap(one, two): 
+def swap(one, two):
     temp = one
     one = two
     two = temp
 
 def KSA(key):
     """
-    KSA 
+    KSA
         Arguments:
-        Algorithm: 
+        Algorithm:
         Return:
     """
 
     S = [i for i in range(256)]
     key_array = bytearray(key, 'utf-8')
     j = 0
-    for i in range(256): 
+    for i in range(256):
         j = (j + S[i] + key_array[i % len(key_array)]) % 256
         temp = S[i]
         S[i] = S[j]
@@ -32,7 +32,7 @@ def RGA(iterate, arr):
     """
     RGA
         Arguments:
-        Algorithm: 
+        Algorithm:
         Return:
     """
 
@@ -52,7 +52,7 @@ def RGA(iterate, arr):
     return answer
 
 def main():
-    test = (KSA("test1"))
+    test = (KSA("Key"))
     print(test)
     print('-----------------------------------')
     print(RGA(5, test))
