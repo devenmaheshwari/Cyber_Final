@@ -31,6 +31,8 @@ def KSA(key):
 def RGA(iterate, arr):
     """
     RGA
+        Dependencies:
+            KSA(key) to get the permutation array of byte encoding of the key
         Arguments:
         Algorithm:
         Return:
@@ -51,11 +53,45 @@ def RGA(iterate, arr):
         index += 1
     return answer
 
+def XOR(plaintext, arr):
+    """
+    XOR
+        Dependencies: RGA generated values for the array to be XOR against the plaintext
+        Arguments:
+        Algorithm:
+        Return:
+    """
+
+    ciphertext = []
+    plaintext_arr = bytearray(plaintext.encode())
+
+    index = 0
+    for i in range(len(plaintext_arr) - len(arr)):
+        if (index >= len(arr)):
+            index = 0
+        arr.append(arr[index])
+        index += 1
+    
+    arr_arr = bytearray(arr)
+
+    for i in range(len(plaintext_arr)):
+        if (plaintext_arr[i] != arr_arr[i]):
+            ciphertext.append(1)
+        else:
+            ciphertext.append(0)
+
+    return bytes(ciphertext) #.decode("utf-8")
+
 def main():
     test = (KSA("Key"))
     print(test)
     print('-----------------------------------')
-    print(RGA(5, test))
+
+    test1 = RGA(5, test)
+    print(test1)
+    print('-----------------------------------')
+
+    print(XOR("Hello World", test1))
 
 if __name__ == "__main__":
     main()
