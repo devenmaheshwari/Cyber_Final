@@ -5,10 +5,10 @@
 
 import numpy as np
 
-def swap(one, two):
-    temp = one
-    one = two
-    two = temp
+##def swap(one, two):
+##    temp = one
+##    one = two
+##    two = temp
 
 def KSA(key):
     """
@@ -53,34 +53,34 @@ def RGA(iterate, arr):
         index += 1
     return answer
 
-def XOR(plaintext, arr):
-    """
-    XOR
-        Dependencies: RGA generated values for the array to be XOR against the plaintext
-        Arguments:
-        Algorithm:
-        Return:
-    """
-
-    ciphertext = []
-    plaintext_arr = bytearray(plaintext.encode())
-
-    index = 0
-    for i in range(len(plaintext_arr) - len(arr)):
-        if (index >= len(arr)):
-            index = 0
-        arr.append(arr[index])
-        index += 1
-
-    arr_arr = bytearray(arr)
-
-    for i in range(len(plaintext_arr)):
-        if (plaintext_arr[i] != arr_arr[i]):
-            ciphertext.append(1)
-        else:
-            ciphertext.append(0)
-
-    return bytes(ciphertext) #.decode("utf-8")
+##def XOR(plaintext, arr):
+##    """
+##    XOR
+##        Dependencies: RGA generated values for the array to be XOR against the plaintext
+##        Arguments:
+##        Algorithm:
+##        Return:
+##    """
+##
+##    ciphertext = []
+##    plaintext_arr = bytearray(plaintext.encode())
+##
+##    index = 0
+##    for i in range(len(plaintext_arr) - len(arr)):
+##        if (index >= len(arr)):
+##            index = 0
+##        arr.append(arr[index])
+##        index += 1
+##
+##    arr_arr = bytearray(arr)
+##
+##    for i in range(len(plaintext_arr)):
+##        if (plaintext_arr[i] != arr_arr[i]):
+##            ciphertext.append(1)
+##        else:
+##            ciphertext.append(0)
+##
+##    return bytes(ciphertext) #.decode("utf-8")
 
 def encoder(plaintext, key):
     plaintext_array = bytearray(plaintext.encode())
