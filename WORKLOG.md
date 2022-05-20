@@ -6,7 +6,7 @@ Deven Maheshwari & Jerry Liang
 ## Log
 
 #### 5/19
-Jerry: Created file structure and testing main method. 
+Jerry: Created file structure and testing main method.  
 Deven: Added XOR function, needs tweaking for comparing plaintext and RGA specified values. Ciphertext produced in byte string. 
 
 #### MORE DATES
