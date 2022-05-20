@@ -99,7 +99,7 @@ def main():
     print(test1)
     print('-----------------------------------')
 
-    print(XOR("Plaintext", test1))
+    ##print(XOR("Plaintext", test1))
     print(encoder("Plaintext", "Key"))
 
 if __name__ == "__main__":
