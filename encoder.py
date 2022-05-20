@@ -90,6 +90,15 @@ def encoder(plaintext, key):
         ciphertext.append(plaintext_array[i] ^ keystream[i])
     return ciphertext
 
+def file_encoder(plaintext_file, key_file, output_name):
+    plaintext = open(plaintext_file, "rb")
+    key = open(key_file, "rb")
+    output_file = open(output_name, "wx")
+    plaintext_array = bytearray(plaintext.read())
+    keystream = RGA(len(plaintext_array), KSA(key.read()))
+    for i in range(len(plaintext_array)):
+        output_file.write(plaintext_array[i] ^ keystream[i])
+
 def main():
     test = (KSA("Key"))
     print(test)
