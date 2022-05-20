@@ -10,6 +10,11 @@ Deven Maheshwari & Jerry Liang
 
 **Deven:** Added XOR function, needs tweaking for comparing plaintext and RGA specified values. Ciphertext produced in byte string.
 
+#### 5/20
+**Jerry:** Commented out extraneous code. Wrote decoder method. Created new encode method that takes file arguments and returns file output (needs to be tested).
+
+**Deven:** LOREM IPSUM
+
 #### MORE DATES
 
 ## References and Resources
