@@ -98,6 +98,9 @@ def file_encoder(plaintext_file, key_file, output_name):
     keystream = RGA(len(plaintext_array), KSA(key.read()))
     for i in range(len(plaintext_array)):
         output_file.write(plaintext_array[i] ^ keystream[i])
+    plaintext.close()
+    key.close()
+    output_file.close()
 
 def main():
     test = (KSA("Key"))
