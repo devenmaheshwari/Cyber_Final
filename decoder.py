@@ -48,13 +48,13 @@ def RGA(iterate, arr):
         index += 1
     return answer
 
-def decoder(plaintext, key):
-    plaintext_array = bytearray(plaintext.encode())
-    keystream = RGA(len(plaintext_array), KSA(key))
-    ciphertext = []
-    for i in range(len(plaintext_array)):
-        ciphertext.append(plaintext_array[i] ^ keystream[i])
-    return ciphertext
+def decoder(ciphertext, key):
+    ciphertext_array = bytearray(ciphertext.encode())
+    keystream = RGA(len(ciphertext_array), KSA(key))
+    plaintext = []
+    for i in range(len(ciphertext_array)):
+        plaintext.append(ciphertext_array[i] ^ keystream[i])
+    return plaintext
 
 def main():
     test = (KSA("Key"))
@@ -65,7 +65,7 @@ def main():
     print(test1)
     print('-----------------------------------')
 
-    print(encoder("Plaintext", "Key"))
+    print(decoder("Plaintext", "Key"))
 
 if __name__ == "__main__":
     main()
