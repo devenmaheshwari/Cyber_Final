@@ -42,7 +42,7 @@ def RGA(iterate, arr):
     j = 0
     index = 0
     answer = []
-    while index <= iterate:
+    while index < iterate:
         i = (i + 1) % 256
         j = (j + arr[i]) % 256
         temp = arr[i]
@@ -71,7 +71,7 @@ def XOR(plaintext, arr):
             index = 0
         arr.append(arr[index])
         index += 1
-    
+
     arr_arr = bytearray(arr)
 
     for i in range(len(plaintext_arr)):
@@ -82,6 +82,14 @@ def XOR(plaintext, arr):
 
     return bytes(ciphertext) #.decode("utf-8")
 
+def encoder(plaintext, key):
+    plaintext_array = bytearray(plaintext.encode())
+    keystream = RGA(len(plaintext_array), KSA(key))
+    ciphertext = []
+    for i in range(len(plaintext_array)):
+        ciphertext.append(plaintext_array[i] ^ keystream[i])
+    return ciphertext
+
 def main():
     test = (KSA("Key"))
     print(test)
@@ -91,7 +99,8 @@ def main():
     print(test1)
     print('-----------------------------------')
 
-    print(XOR("Hello World", test1))
+    print(XOR("Plaintext", test1))
+    print(encoder("Plaintext", "Key"))
 
 if __name__ == "__main__":
     main()
