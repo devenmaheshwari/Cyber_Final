@@ -53,36 +53,17 @@ def RGA(iterate, arr):
         index += 1
     return answer
 
-##def XOR(plaintext, arr):
-##    """
-##    XOR
-##        Dependencies: RGA generated values for the array to be XOR against the plaintext
-##        Arguments:
-##        Algorithm:
-##        Return:
-##    """
-##
-##    ciphertext = []
-##    plaintext_arr = bytearray(plaintext.encode())
-##
-##    index = 0
-##    for i in range(len(plaintext_arr) - len(arr)):
-##        if (index >= len(arr)):
-##            index = 0
-##        arr.append(arr[index])
-##        index += 1
-##
-##    arr_arr = bytearray(arr)
-##
-##    for i in range(len(plaintext_arr)):
-##        if (plaintext_arr[i] != arr_arr[i]):
-##            ciphertext.append(1)
-##        else:
-##            ciphertext.append(0)
-##
-##    return bytes(ciphertext) #.decode("utf-8")
 
 def encoder(plaintext, key):
+    """
+    Encoder
+        Dependencies:
+            KSA(key) to get the permutation array of byte encoding of the key
+        Arguments:
+        Algorithm:
+        Return:
+    """
+
     plaintext_array = bytearray(plaintext.encode())
     keystream = RGA(len(plaintext_array), KSA(key))
     ciphertext = []
@@ -94,8 +75,10 @@ def file_encoder(plaintext_file, key_file, output_name):
     plaintext = open(plaintext_file, "rb")
     key = open(key_file, "rb")
     output_file = open(output_name, "wx")
+
     plaintext_array = bytearray(plaintext.read())
     keystream = RGA(len(plaintext_array), KSA(key.read()))
+    
     for i in range(len(plaintext_array)):
         output_file.write(plaintext_array[i] ^ keystream[i])
     plaintext.close()

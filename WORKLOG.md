@@ -13,7 +13,9 @@ Deven Maheshwari & Jerry Liang
 #### 5/20
 **Jerry:** Commented out extraneous code. Wrote decoder method. Created new encode method that takes file arguments and returns file output (needs to be tested).
 
-**Deven:** LOREM IPSUM
+#### 5/21
+**Deven:** Added basic commenting. Also included decoder file method in decoder.py. Will test next 
+session. 
 
 #### MORE DATES
 
