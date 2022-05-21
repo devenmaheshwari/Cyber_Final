@@ -49,12 +49,34 @@ def RGA(iterate, arr):
     return answer
 
 def decoder(ciphertext, key):
+    """
+    Decoder
+        Dependencies:
+            KSA(key) to get the permutation array of byte encoding of the key
+        Arguments:
+        Algorithm:
+        Return:
+    """
     ciphertext_array = bytearray(ciphertext.encode())
     keystream = RGA(len(ciphertext_array), KSA(key))
     plaintext = []
     for i in range(len(ciphertext_array)):
         plaintext.append(ciphertext_array[i] ^ keystream[i])
     return plaintext
+
+def file_decoder(ciphertext_file, key_file, output_name):
+    ciphertext = open(ciphertext_file, "rb")
+    key = open(key_file, "rb")
+    output_file = open(output_name, "wx")
+
+    ciphertext_array = bytearray(ciphertext.read())
+    keystream = RGA(len(ciphertext_array), KSA(key.read()))
+    
+    for i in range(len(ciphertext_array)):
+        output_file.write(ciphertext_array[i] ^ keystream[i])
+    ciphertext.close()
+    key.close()
+    output_file.close()
 
 def main():
     test = (KSA("Key"))
