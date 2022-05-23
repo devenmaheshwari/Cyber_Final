@@ -23,7 +23,7 @@ def KSA(key):
     """
 
     S = [i for i in range(256)]
-    key_array = key #bytearray(key, 'utf-8')
+    key_array = bytearray(key, 'utf-8')
     j = 0
     for i in range(256):
         j = (j + S[i] + key_array[i % len(key_array)]) % 256
@@ -83,7 +83,7 @@ def encoder(plaintext, key):
     ciphertext = []
     for i in range(len(plaintext_array)):
         ciphertext.append(plaintext_array[i] ^ keystream[i])
-    return ciphertext
+    return bytearray(ciphertext)
 
 def file_encoder(plaintext_file, key_file, output_name):
     """
@@ -114,7 +114,13 @@ def file_encoder(plaintext_file, key_file, output_name):
     output_file.close()
 
 def main():
-    print(file_encoder('plaintext.txt', 'key.txt', 'cipher.txt'))
+    test = KSA("key")
+    print(test)
+    print()
+    test2 = RGA(len(test), test)
+    print(test2)
+    print()
+    print(encoder('plaintext', "key"))
 
 if __name__ == "__main__":
     main()

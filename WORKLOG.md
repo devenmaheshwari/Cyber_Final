@@ -17,6 +17,10 @@ Deven Maheshwari & Jerry Liang
 **Deven:** Added basic commenting. Also included decoder file method in decoder.py. Will test next 
 session. 
 
+#### 5/23/
+**Deven:** Notes for all functions within encoding. Ran into type errors while testing, looked at byte
+types for arrays. 
+
 #### MORE DATES
 
 ## References and Resources
