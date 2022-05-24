@@ -23,7 +23,7 @@ session.
 types for arrays.
 
 ### 5/24
-**Deven** Added 
+**Deven** Configuring makefile and presentation/readme files. Planning out homework activity with NLP. 
 
 #### MORE DATES
 
