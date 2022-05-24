@@ -12,11 +12,11 @@ Insecurities, in this case, refer to the drawbacks of this cipher which can be l
 
 To use the RC4 cipher encoder and decoder, run the makefile with the following commands:
 
-To encode: ```$make encode ARGS="plaintextfile keyfile"```
-To decode: ```$make encode ARGS="ciphertextfile keyfile"```
-To analyze the issues with RC4: ```$make encode ARGS="inputFileName"```
+To encode: ```$make encode ARGS="plaintextfile keyfile"```  
+To decode: ```$make encode ARGS="ciphertextfile keyfile"```  
+To analyze the issues with RC4: ```$make encode ARGS="inputFileName"```  
 
 
 ## Links
-[Presentation](https://github.com/devenmaheshwari/Cyber_Final/blob/main/PRESENTATION.md)
+[Presentation](https://github.com/devenmaheshwari/Cyber_Final/blob/main/PRESENTATION.md)  
 [Homework](https://github.com/devenmaheshwari/Cyber_Final/blob/main/HOMEWORK.md)
