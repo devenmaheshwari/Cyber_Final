@@ -10,16 +10,17 @@ Deven Maheshwari & Jerry Liang
 
 **Deven:** Added XOR function, needs tweaking for comparing plaintext and RGA specified values. Ciphertext produced in byte string.
 
-#### 5/20
+#### 5/20-22
 **Jerry:** Commented out extraneous code. Wrote decoder method. Created new encode method that takes file arguments and returns file output (needs to be tested).
 
-#### 5/21
-**Deven:** Added basic commenting. Also included decoder file method in decoder.py. Will test next 
-session. 
+**Deven:** Added basic commenting. Also included decoder file method in decoder.py. Will test next
+session.
 
-#### 5/23/
+#### 5/23
+**Jerry** Fixed encode method that takes in file arguments and returns file output. Wrote helper KSA_byte function. Tested file encoder and had expected output.
+
 **Deven:** Notes for all functions within encoding. Ran into type errors while testing, looked at byte
-types for arrays. 
+types for arrays.
 
 #### MORE DATES
 
