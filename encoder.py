@@ -5,11 +5,6 @@
 
 import numpy as np
 
-##def swap(one, two):
-##    temp = one
-##    one = two
-##    two = temp
-
 def KSA(key):
     """
     KSA - Key Scheduling Algorithm in order to create an array of byte values to be used in RGA for encoding.
@@ -119,7 +114,6 @@ def file_encoder(plaintext_file, key_file, output_name):
             output_name - file to be written to with ciphertext
         Algorithm:
             Uses KSA and RGA and XOR's the plaintext with the generated array to produce the ciphertext.
-
     """
 
     plaintext = open(plaintext_file, "rb")
@@ -136,13 +130,13 @@ def file_encoder(plaintext_file, key_file, output_name):
     output_file.close()
 
 def main():
-    test = KSA("key")
+    test = KSA("Key")
     print(test)
     print()
     test2 = RGA(len(test), test)
     print(test2)
     print()
-    print(encoder('plaintext', "key"))
+    print(encoder('Plaintext', "Key"))
     file_encoder("plaintext.txt", "key.txt", "ciphertext.txt")
 
 if __name__ == "__main__":
