@@ -22,6 +22,9 @@ session.
 **Deven:** Notes for all functions within encoding. Ran into type errors while testing, looked at byte
 types for arrays.
 
+### 5/24
+**Deven** Added 
+
 #### MORE DATES
 
 ## References and Resources

@@ -10,11 +10,13 @@ We will be tackling the RC4 (Rivest Cipher) stream cipher. The RC4 Cipher is kno
 This project contains files to encode, decode, and find the insecurities associated with the RC4 cipher.
 Insecurities, in this case, refer to the drawbacks of this cipher which can be learned about in the presentation linked below. 
 
-To use the RC4 cipher encoder and decoder, run the makefile with the following commands:
-
-To encode: ```$make encode ARGS="plaintextfile keyfile"```  
-To decode: ```$make encode ARGS="ciphertextfile keyfile"```  
-To analyze the issues with RC4: ```$make encode ARGS="inputFileName"```  
+#### Steps to Success: 
+1. cd into the /source subdirectory
+2. Download any dependencies with ```$pip3 install -r requirements.txt```
+3. Configure your plaintext and keyfile
+    To encode: ```$make encode ARGS="plaintextfile keyfile"```  
+    To decode: ```$make encode ARGS="ciphertextfile keyfile"```  
+    To analyze the issues with RC4: ```$make encode ARGS="inputFileName"```  
 
 
 ## Links
