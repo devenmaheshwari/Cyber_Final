@@ -5,11 +5,6 @@
 
 import numpy as np
 
-##def swap(one, two):
-##    temp = one
-##    one = two
-##    two = temp
-
 def KSA(key):
     """
     KSA - Key Scheduling Algorithm in order to create an array of byte values to be used in RGA for encoding.
