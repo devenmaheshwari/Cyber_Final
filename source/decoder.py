@@ -52,17 +52,17 @@ def KSA_byte(key):
 
 def RGA(iterate, arr):
     """
-    RGA - Random Generation Algorithm in order to generate a bit array to be XOR'ed with the plaintext
+    RGA - Random Generation Algorithm in order to generate a byte array to be XOR'ed with the plaintext
         Dependencies:
             KSA(key) to get the permutation array of byte encoding of the key
         Arguments:
-            iterate - number of values to be generated in the bit array
+            iterate - number of values to be generated in the byte array
             arr - the identity permutation from the KSA
         Algorithm:
             For iternates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
             from S fm the keystream.
         Return:
-            answer - bit array to be XOR'ed
+            answer - byte array to be XOR'ed
     """
 
     i = 0
@@ -92,7 +92,7 @@ def decoder(ciphertext, key):
         Algorithm:
             Uses KSA and RGA and XOR's the ciphertext with the generated array to produce the plaintext.
         Return:
-            plaintext - bit array
+            plaintext - byte array
     Does not function. Meant as organizational code since strings are innately ascii. 
     """
     
