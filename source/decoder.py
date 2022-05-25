@@ -119,13 +119,13 @@ def file_decoder(ciphertext_file, key_file, output_name):
 
     ciphertext = open(ciphertext_file, "rb")
     key = open(key_file, "rb")
-    output_file = open(output_name, "wx")
+    output_file = open(output_name, "wb")
 
     ciphertext_array = bytearray(ciphertext.read())
-    keystream = RGA(len(ciphertext_array), KSA(key.read()))
+    keystream = RGA(len(ciphertext_array), KSA_byte(key.read()))
 
     for i in range(len(ciphertext_array)):
-        output_file.write(ciphertext_array[i] ^ keystream[i])
+        output_file.write((ciphertext_array[i] ^ keystream[i]).to_bytes(1, "big"))
     ciphertext.close()
     key.close()
     output_file.close()
