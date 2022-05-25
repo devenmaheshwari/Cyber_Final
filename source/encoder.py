@@ -4,6 +4,7 @@
 # May 31, 2022
 
 import numpy as np
+import sys
 
 def KSA(key):
     """
@@ -79,64 +80,62 @@ def RGA(iterate, arr):
         index += 1
     return answer
 
-def decoder(ciphertext, key):
+
+def encoder(plaintext, key):
     """
     Encoder
         Dependencies:
             KSA(key) to get the permutation array of byte encoding of the key
             RGA to generate XOR array
         Arguments:
-            ciphertext - string
+            plaintext - string
             key - string
         Algorithm:
             Uses KSA and RGA and XOR's the plaintext with the generated array to produce the ciphertext.
         Return:
-            plaintext - bit array
+            ciphertext - bit array
+    Does not function. Meant as organizational code since strings are innately ascii. 
     """
-    ciphertext_array = bytearray(ciphertext.encode())
-    keystream = RGA(len(ciphertext_array), KSA(key))
-    plaintext = []
-    for i in range(len(ciphertext_array)):
-        plaintext.append(ciphertext_array[i] ^ keystream[i])
-    return plaintext
 
-def file_decoder(ciphertext_file, key_file, output_name):
+    plaintext_array = bytearray(plaintext.encode())
+    keystream = RGA(len(plaintext_array), KSA(key))
+    ciphertext = []
+    for i in range(len(plaintext_array)):
+        ciphertext.append(plaintext_array[i] ^ keystream[i])
+    return bytearray(ciphertext)
+
+def file_encoder(plaintext_file, key_file, output_name):
     """
-    Decoder for files
+    Encoder for files
         Dependencies:
             KSA(key) to get the permutation array of byte encoding of the key
             RGA to generate XOR array
         Arguments:
-            ciphertext_file - file
+            plaintext_file - file
             key_file - file
             output_name - file to be written to with ciphertext
         Algorithm:
-            Uses KSA and RGA and XOR's the ciphertext with the generated array to produce the plaintext.
+            Uses KSA and RGA and XOR's the plaintext with the generated array to produce the ciphertext.
     """
 
-    ciphertext = open(ciphertext_file, "rb")
+    plaintext = open(plaintext_file, "rb")
     key = open(key_file, "rb")
-    output_file = open(output_name, "wx")
+    output_file = open(output_name, "wb")
 
-    ciphertext_array = bytearray(ciphertext.read())
-    keystream = RGA(len(ciphertext_array), KSA(key.read()))
+    plaintext_array = bytearray(plaintext.read())
+    keystream = RGA(len(plaintext_array), KSA_byte(key.read()))
 
-    for i in range(len(ciphertext_array)):
-        output_file.write(ciphertext_array[i] ^ keystream[i])
-    ciphertext.close()
+    for i in range(len(plaintext_array)):
+        output_file.write((plaintext_array[i] ^ keystream[i]).to_bytes(1, "big"))
+    plaintext.close()
     key.close()
     output_file.close()
 
 def main():
-    test = (KSA("Key"))
-    print(test)
-    print('-----------------------------------')
-
-    test1 = RGA(5, test)
-    print(test1)
-    print('-----------------------------------')
-
-    #print(decoder(chr(187) + chr(243) + chr(22) + chr(232) + chr(217) + chr(64) + chr(175) + chr(10) + chr(211), "Key"))
+    try:
+        filename = file_encoder(sys.argv[1], sys.argv[2], sys.argv[2])
+    except:
+        print("Incorrect Arguments")
 
 if __name__ == "__main__":
     main()

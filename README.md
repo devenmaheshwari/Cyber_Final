@@ -12,10 +12,10 @@ Insecurities, in this case, refer to the drawbacks of this cipher which can be l
 
 #### Steps to Success: 
 1. cd into the /source subdirectory
-2. Download any dependencies with ```$pip3 install -r requirements.txt```
+2. Download any dependencies with ```$pip3 install -r code/requirements.txt```
 3. Configure your plaintext and keyfile
     To encode: ```$make encode ARGS="plaintextfile keyfile"```  
-    To decode: ```$make encode ARGS="ciphertextfile keyfile"```  
+    To decode: ```$make decode ARGS="ciphertextfile keyfile"```  
     To analyze the issues with RC4: ```$make encode ARGS="inputFileName"```  
 
 
