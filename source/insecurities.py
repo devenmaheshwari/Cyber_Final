@@ -11,28 +11,6 @@ def KSA(key):
     """
     KSA - Key Scheduling Algorithm in order to create an array of byte values to be used in RGA for encoding.
         Arguments:
-            key - string
-        Algorithm:
-            Initializes an array of length 256 to represent the number of bytes available for key encoding then
-            switches values within the array using the key length and key length in bytes.
-        Return:
-            S - byte array
-    """
-
-    S = [i for i in range(256)]
-    key_array = bytearray(key, 'utf-8')
-    j = 0
-    for i in range(256):
-        j = (j + S[i] + key_array[i % len(key_array)]) % 256
-        temp = S[i]
-        S[i] = S[j]
-        S[j] = temp
-    return S
-
-def KSA_byte(key):
-    """
-    KSA - Key Scheduling Algorithm in order to create an array of byte values to be used in RGA for encoding.
-        Arguments:
             key - bytes
         Algorithm:
             Initializes an array of length 256 to represent the number of bytes available for key encoding then
@@ -85,8 +63,13 @@ def main():
     tograph = {}
     for i in range(256):
         for j in range(256):
-            if (tograph)
-            tograph[RGA(2,KSA(i+j))] += 1
+            help = RGA(2,KSA((256 * i+j).to_bytes(2, "big")))[1]
+            if help in tograph: 
+                tograph[help] += 1
+            else:
+                tograph[help] = 1
+    plt.bar(tograph.keys(), tograph.values())
+    plt.show()
 
 
 if __name__ == "__main__":
