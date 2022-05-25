@@ -23,7 +23,9 @@ session.
 types for arrays.
 
 ### 5/24
-**Deven** Configuring makefile and presentation/readme files. Planning out homework activity with NLP. 
+**Jerry:** Wrote decode method that takes in file arguments and returns file output. Tested file decoder and had expected output.
+
+**Deven:** Configuring makefile and presentation/readme files. Planning out homework activity with NLP.
 
 #### MORE DATES
 
