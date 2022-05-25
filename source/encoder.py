@@ -94,7 +94,7 @@ def encoder(plaintext, key):
             Uses KSA and RGA and XOR's the plaintext with the generated array to produce the ciphertext.
         Return:
             ciphertext - byte array
-    Does not function. Meant as organizational code since strings are innately ascii. 
+    Does not function. Meant as organizational code since strings are innately ascii.
     """
 
     plaintext_array = bytearray(plaintext.encode())
@@ -133,7 +133,7 @@ def file_encoder(plaintext_file, key_file, output_name):
 
 def main():
     try:
-        filename = file_encoder(sys.argv[1], sys.argv[2], sys.argv[2])
+        filename = file_encoder(sys.argv[1], sys.argv[2], sys.argv[3])
     except:
         print("Incorrect Arguments")
 

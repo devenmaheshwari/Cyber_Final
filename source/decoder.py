@@ -93,9 +93,9 @@ def decoder(ciphertext, key):
             Uses KSA and RGA and XOR's the ciphertext with the generated array to produce the plaintext.
         Return:
             plaintext - byte array
-    Does not function. Meant as organizational code since strings are innately ascii. 
+    Does not function. Meant as organizational code since strings are innately ascii.
     """
-    
+
     ciphertext_array = bytearray(ciphertext.encode())
     keystream = RGA(len(ciphertext_array), KSA(key))
     plaintext = []
@@ -132,7 +132,7 @@ def file_decoder(ciphertext_file, key_file, output_name):
 
 def main():
     try:
-        filename = file_decoder(sys.argv[1], sys.argv[2], sys.argv[2])
+        filename = file_decoder(sys.argv[1], sys.argv[2], sys.argv[3])
     except:
         print("Incorrect Arguments")
 
