@@ -15,12 +15,12 @@ Insecurities, in this case, refer to the drawbacks of this cipher which can be l
 2. Download any dependencies with 
 ```$pip3 install -r code/requirements.txt```
 3. Configure your plaintext and keyfile
-    To encode: 
-    ```$make encode ARGS="plaintextfile keyfile outputfile"```  
-    To decode: 
-    ```$make decode ARGS="ciphertextfile keyfile outputfile"``  
-    To analyze the issues with RC4: 
-    ```$make insecurities"```  
+    To encode:  
+    ```$make encode ARGS="plaintextfile keyfile outputfile"```    
+    To decode:   
+    ```$make decode ARGS="ciphertextfile keyfile outputfile"``    
+    To analyze the issues with RC4:   
+    ```$make insecurities"```    
 
 
 ## Links
