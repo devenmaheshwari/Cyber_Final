@@ -134,6 +134,8 @@ def file_encoder(plaintext_file, key_file, output_name):
 def main():
     try:
         filename = file_encoder(sys.argv[1], sys.argv[2], sys.argv[3])
+        #with open(filename) as f:
+            #print(f.read().decode('UTF-8'))    
     except:
         print("Incorrect Arguments")
 
