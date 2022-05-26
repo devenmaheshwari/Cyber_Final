@@ -4,7 +4,7 @@
 # May 31, 2022
 
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import random
 
 def KSA(key):
@@ -68,8 +68,16 @@ def main():
                 tograph[help] += 1
             else:
                 tograph[help] = 1
-    plt.bar(tograph.keys(), tograph.values())
+    fig, ax = plt.subplots()
+
+    ax.bar(tograph.keys(), tograph.values(), width=1, edgecolor="white", linewidth=0.7)
+
+    ax.set(xlim=(-1, 256), xticks=np.arange(1, 8),
+    ylim=(0, 100), yticks=np.arange(1, 8))
+
     plt.show()
+    #plt.plot(tograph.keys(), tograph.values())
+    #plt.show()
 
 
 if __name__ == "__main__":
