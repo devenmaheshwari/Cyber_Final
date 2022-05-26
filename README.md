@@ -12,17 +12,19 @@ Insecurities, in this case, refer to the drawbacks of this cipher which can be l
 
 #### Steps to Success:
 1. cd into the /source subdirectory
-2. Download any dependencies with 
+2. Download any dependencies with
 ```$pip3 install -r code/requirements.txt```
-3. Configure your plaintext and keyfile
-    To encode:  
+3. Configure your plaintext and keyfile.
+    * To encode:  
     ```$make encode ARGS="plaintextfile keyfile outputfile"```    
-    To decode:   
-    ```$make decode ARGS="ciphertextfile keyfile outputfile"``    
-    To analyze the issues with RC4:   
-    ```$make insecurities"```    
+
+    * To decode:   
+    ```$make decode ARGS="ciphertextfile keyfile outputfile"```    
+
+    * To analyze the issues with RC4:   
+    ```$make insecurities```    
 
 
 ## Links
-[Presentation](https://github.com/devenmaheshwari/Cyber_Final/blob/main/PRESENTATION.md)  
-[Homework](https://github.com/devenmaheshwari/Cyber_Final/blob/main/HOMEWORK.md)
+* [Presentation](https://github.com/devenmaheshwari/Cyber_Final/blob/main/PRESENTATION.md)  
+* [Homework](https://github.com/devenmaheshwari/Cyber_Final/blob/main/HOMEWORK.md)
