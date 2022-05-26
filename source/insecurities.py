@@ -68,16 +68,12 @@ def main():
                 tograph[help] += 1
             else:
                 tograph[help] = 1
-    fig, ax = plt.subplots()
 
-    ax.bar(tograph.keys(), tograph.values(), width=1, edgecolor="white", linewidth=0.7)
-
-    ax.set(xlim=(-1, 256), xticks=np.arange(1, 8),
-    ylim=(0, 100), yticks=np.arange(1, 8))
-
+    plt.bar(tograph.keys(),tograph.values(), width=3, linewidth=10, align='edge')
+    plt.title('RGA Value 2 Spread')
+    plt.xlabel('Value')
+    plt.ylabel('Number of times')
     plt.show()
-    #plt.plot(tograph.keys(), tograph.values())
-    #plt.show()
 
 
 if __name__ == "__main__":

@@ -5,4 +5,4 @@ decode : decoder.py
 	python3 decoder.py $(ARGS)
 
 insecurities : insecurities.py
-	python3 insecurities.py $(ARGS)
+	python3 insecurities.py
