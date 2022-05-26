@@ -17,18 +17,28 @@ Deven Maheshwari & Jerry Liang
 session.
 
 #### 5/23
-**Jerry** Fixed encode method that takes in file arguments and returns file output. Wrote helper KSA_byte function. Tested file encoder and had expected output.
+**Jerry:** Fixed encode method that takes in file arguments and returns file output. Wrote helper KSA_byte function. Tested file encoder and had expected output.
 
 **Deven:** Notes for all functions within encoding. Ran into type errors while testing, looked at byte
 types for arrays.
 
-### 5/24
+#### 5/24
 **Jerry:** Wrote decode method that takes in file arguments and returns file output. Tested file decoder and had expected output.
 
 **Deven:** Configuring makefile and presentation/readme files. Planning out homework activity with NLP.
+
+#### 5/25
+**Jerry:** Updated encode and decode to work with makefile. Fixed makefile to have proper instructions.
+
+**Deven:** LOREM IPSUM
+
+#### 5/26
+**Jerry:**
+
+**Deven:**
 
 #### MORE DATES
 
 ## References and Resources
 * Wikipedia: (https://en.wikipedia.org/wiki/RC4)
-* LOREM IPSUM
+* _A Practical Attack on Broadcast RC4_ by Itsik Mantin and Adi Shamir: (https://link.springer.com/content/pdf/10.1007%2F3-540-45473-X_13.pdf)
