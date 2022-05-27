@@ -30,14 +30,17 @@ types for arrays.
 #### 5/25
 **Jerry:** Updated encode and decode to work with makefile. Fixed makefile to have proper instructions.
 
-**Deven:** Completed insecurities file to use bar graphs instead of a line chart. Updated file structure. 
+**Deven:** Completed insecurities file to use bar graphs instead of a line chart. Updated file structure.
 
 #### 5/26
-**Jerry:**
+**Jerry:** Updated README and PRESENTATION with correct information and linked more resources.
 
-**Deven:** Added terminal output for encoder and decoder. Tested makefile and worked on lesson plan for the presentation. 
+**Deven:** Added terminal output for encoder and decoder. Tested makefile and worked on lesson plan for the presentation.
 
-#### MORE DATES
+#### 5/27-5/30
+**Jerry:** LOREM IPSUM
+
+**Deven:** LOREM IPSUM
 
 ## References and Resources
 * Wikipedia: (https://en.wikipedia.org/wiki/RC4)
