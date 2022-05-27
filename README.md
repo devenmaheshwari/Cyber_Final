@@ -24,7 +24,7 @@ Insecurities, in this case, refer to the drawbacks of this cipher which can be l
     * To analyze the issues with RC4:   
     ```$make insecurities```  
     
-4. To see the output of the encoder/decoder file, ```hd outputfile``` in the terminal. 
+4. To see the output of the encoder/decoder file, ```$hd outputfile``` in the terminal. 
 
 
 ## Links
