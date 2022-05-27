@@ -3,16 +3,17 @@ Stuyvesant Cybersecurity 2022: Final Project
 
 Deven Maheshwari & Jerry Liang
 
-### What is RC4
+### What is RC4?
+
+The RC4 cipher, short for the Rivest Cipher 4, is a stream cipher first developed by Ron Rivest in 1987 for the RSA Security Company. This cipher was kept a secret until 1994, when the code was leaked. The RC4 cipher is known for its simplicity and speed, and despite numerous vulnerabilities, it is remarkably secure for a cipher of its time.
+
+Today, we will give background on what it is used for, explain how the RC4 cipher works, demonstrate an RC4 encoder/decoder, and showcase one of its vulnerabilities.
 
 ---
-### How does it work
+### Who uses it?
 
 ---
-### Who uses it
-
----
-### Why does this matter to us
+### How does it work?
 
 ---
 ### Drawbacks of RC4
@@ -26,6 +27,9 @@ This exploit was used in an attack on WEP (wireless equivalent privacy) wireless
 ![0 is huge!!](presentation/Figure_1.png)
 
 The fix for this exploit is to disregard the first values of the keystream.
+
+---
+### Why does this matter to us?
 
 ---
 ## Links
