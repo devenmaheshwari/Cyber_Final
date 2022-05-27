@@ -37,10 +37,12 @@ types for arrays.
 
 **Deven:** Added terminal output for encoder and decoder. Tested makefile and worked on lesson plan for the presentation.
 
-#### 5/27-5/30
+#### 5/27
 **Jerry:** LOREM IPSUM
 
-**Deven:** LOREM IPSUM
+**Deven:** Created file structure for homework scavenger using bash script run.sh. 
+
+#### 5/28-5/30
 
 ## References and Resources
 * Wikipedia: (https://en.wikipedia.org/wiki/RC4)
