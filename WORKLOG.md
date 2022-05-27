@@ -30,12 +30,12 @@ types for arrays.
 #### 5/25
 **Jerry:** Updated encode and decode to work with makefile. Fixed makefile to have proper instructions.
 
-**Deven:** LOREM IPSUM
+**Deven:** Completed insecurities file to use bar graphs instead of a line chart. Updated file structure. 
 
 #### 5/26
 **Jerry:**
 
-**Deven:**
+**Deven:** Added terminal output for encoder and decoder. Tested makefile and worked on lesson plan for the presentation. 
 
 #### MORE DATES
 
