@@ -38,6 +38,16 @@ This exploit was used in an attack on WEP (wireless equivalent privacy) wireless
 
 The fix for this exploit is to disregard the first values of the keystream.
 
+There are also numerous other vulnerabilities to RC4 ciphers, including:
+
+* **Roos’ Biases:** Correlations between keystreams and the key.
+* **Biased Outputs:** Like the one we explored above.
+* **Fluhrer Mantin Shamir Attack:** Exploits the nonrandomness of the first few bytes of RC4 cipher.
+* **Andreas Klein Attack:** Also exploits nonrandomness of the first few bytes.
+* **Royal Holloway Attack:** Used to breach and attack TLS/SSL as well as and WPA/TKIP.
+* **Bar-Mitzvah Attack:** Used to attack SSL protocols.
+* And much more.
+
 ---
 ### Why does this matter to us?
 
