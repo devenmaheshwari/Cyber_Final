@@ -1,0 +1,3 @@
+Hello, adventurer, your journey begins here!
+To start, go to the directory with name corresponding to the byte that occurs with probability 1/128 in the second byte of the output.
+(Hint: Review our presentation!)
