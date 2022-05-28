@@ -1,0 +1,3 @@
+Encrypt this file with the key in key1.txt. 
+Your next hint is in the directory that corresponds to the sixth byte of the ciphertext.
+(Hint: Remember how we print the hexdump of a file, use the hd command).
