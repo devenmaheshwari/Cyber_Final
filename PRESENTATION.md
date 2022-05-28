@@ -11,6 +11,16 @@ Today, we will give background on what it is used for, explain how the RC4 ciphe
 
 ---
 ### Who uses it?
+The RC4 cipher has been used in a wide variety of protocols. In particular, the RC4 cipher has been used in the past for Secure Socket Layer (SSL)/ Transport Layer Security (TLS), the IEEE wireless LAN standard, and the Wi-Fi Security Protocol WEP (Wireless Equivalent Protocol).
+
+SSL and TLS are protocols that provide communication security over networks. If you remember our work with Nmap, Nmap uses these protocols to scan networks. Similarly, WEP encrypts wireless traffic.
+
+Furthermore, there have been numerous ciphers that have been derived from RC4:
+
+* **Spritz:** Creates hash functions and deterministic random number generators.
+* **RC4A:** Variant claimed to be faster and stronger than the average RC4 cipher.
+* **VMPC (Variably Modified Permutation Composition):** Variant of RC4
+* **RC4A+:** More complex and stronger version of RCA and RC4A.
 
 ---
 ### How does it work?
