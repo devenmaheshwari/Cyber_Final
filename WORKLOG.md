@@ -37,13 +37,14 @@ types for arrays.
 
 **Deven:** Added terminal output for encoder and decoder. Tested makefile and worked on lesson plan for the presentation.
 
-#### 5/27
-**Jerry:** LOREM IPSUM
+#### 5/27-5/30
+**Jerry:** Finished presentation and homework assignment.
 
-**Deven:** Created file structure for homework scavenger using bash script run.sh. 
-
-#### 5/28-5/30
+**Deven:** Created file structure for homework scavenger using bash script run.sh.
 
 ## References and Resources
 * Wikipedia: (https://en.wikipedia.org/wiki/RC4)
 * _A Practical Attack on Broadcast RC4_ by Itsik Mantin and Adi Shamir: (https://link.springer.com/content/pdf/10.1007%2F3-540-45473-X_13.pdf)
+* "What is RC4?": (https://www.encryptionconsulting.com/education-center/what-is-rc4/)
+* "What Is RC4 and Why Is It A Vulnerability" by Borislav Kiprin: (https://crashtest-security.com/disable-ssl-rc4/)
+* Online Encoder/Decoder: (https://www.dcode.fr/rc4-cipher)
