@@ -59,8 +59,8 @@ def RGA(iterate, arr):
             iterate - number of values to be generated in the byte array
             arr - the identity permutation from the KSA
         Algorithm:
-            For iternates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
-            from S fm the keystream.
+            For iterates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
+            from S from the keystream.
         Return:
             answer - byte array to be XOR'ed
     """
@@ -134,7 +134,7 @@ def main():
     try:
         filename = file_decoder(sys.argv[1], sys.argv[2], sys.argv[3])
         #with open(filename) as f:
-            #print(f.read().decode('UTF-8'))   
+            #print(f.read().decode('UTF-8'))
     except:
         print("Incorrect Arguments")
 

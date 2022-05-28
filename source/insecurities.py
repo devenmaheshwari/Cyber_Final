@@ -38,8 +38,8 @@ def RGA(iterate, arr):
             iterate - number of values to be generated in the bit array
             arr - the identity permutation from the KSA
         Algorithm:
-            For iternates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
-            from S fm the keystream.
+            For iterates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
+            from S from the keystream.
         Return:
             answer - byte array to be XOR'ed
     """
@@ -64,7 +64,7 @@ def main():
     for i in range(256):
         for j in range(256):
             help = RGA(2,KSA((256 * i+j).to_bytes(2, "big")))[1]
-            if help in tograph: 
+            if help in tograph:
                 tograph[help] += 1
             else:
                 tograph[help] = 1
