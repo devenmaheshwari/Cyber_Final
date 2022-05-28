@@ -46,11 +46,17 @@ There are also numerous other vulnerabilities to RC4 ciphers, including:
 * **Andreas Klein Attack:** Also exploits nonrandomness of the first few bytes.
 * **Royal Holloway Attack:** Used to breach and attack TLS/SSL as well as and WPA/TKIP.
 * **Bar-Mitzvah Attack:** Used to attack SSL protocols.
-* And much more.
+* **Man-in-the-Middle Attacks:** Since RC4 does not provide authentication.
+* **And much more.**
 
 ---
 ### Why does this matter to us?
+The RC4 cipher was a once widely used cipher that was renowned for its speed and simplicity. However, since its invention in 1987, there have been numerous vulnerabilities that have been discovered, making RC4 no longer recommended for encryption.
+
+Despite these vulnerabilities, RC4 is still used in some programs/protocols, opening the doors to attacks. In particular, SSH1, SSH2, WPA, and WPA2 protocols still provide the option to use RC4 (though the standard for these protocols have become AES).
+
+The RC4 cipher exemplifies one of the most elegant ciphers developed, one that was once widely used/considered secure. It had (and still has) a great impact on modern encryption and cybersecurity.
 
 ---
 ## Links
-[Making beautiful markdown](https://ghost.org/changelog/markdown/)
+[Making Beautiful Markdown](https://ghost.org/changelog/markdown/)
