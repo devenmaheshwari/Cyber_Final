@@ -1,0 +1,2 @@
+The file containing the flag is called f1@g
+The key is the name of the algorithm that generates the keystream (make sure you don't have a newline at the end of the file!).
