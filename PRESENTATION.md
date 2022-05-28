@@ -3,6 +3,8 @@ Stuyvesant Cybersecurity 2022: Final Project
 
 Deven Maheshwari & Jerry Liang
 
+---
+
 ### What is RC4?
 
 The RC4 cipher, short for the Rivest Cipher 4, is a stream cipher first developed by Ron Rivest in 1987 for the RSA Security Company. This cipher was kept a secret until 1994, when the code was leaked. The RC4 cipher is known for its simplicity and speed, and despite numerous vulnerabilities, it is remarkably secure for a cipher of its time.
@@ -24,6 +26,69 @@ Furthermore, there have been numerous ciphers that have been derived from RC4:
 
 ---
 ### How does it work?
+The RC4 cipher comprises of two main algorithms - the **Key-Scheduling Algorithm (KSA)** and the **PRGA (Pseudo-Random Generation Algorithm)**.
+
+The KSA algorithm uses the key input to create a permutation of all the 256 possible bytes. The PRGA algorithm uses that key schedule to generate a keystream, one byte at a time. Finally, that keystream is XOR'd with the plaintext to output the ciphertext.
+
+Notice that these algorithms are entirely symmetric, meaning that we can encode and decode with the same key and algorithm, just in reverse.
+
+**Code Snippets:**
+```
+def KSA(key):
+    """
+    KSA - Key Scheduling Algorithm in order to create an array of byte values to be used in RGA for encoding.
+        Arguments:
+            key - string
+        Algorithm:
+            Initializes an array of length 256 to represent the number of bytes available for key encoding then
+            switches values within the array using the key length and key length in bytes.
+        Return:
+            S - byte array
+    """
+
+    S = [i for i in range(256)]
+    key_array = bytearray(key, 'utf-8')
+    j = 0
+    for i in range(256):
+        j = (j + S[i] + key_array[i % len(key_array)]) % 256
+        temp = S[i]
+        S[i] = S[j]
+        S[j] = temp
+    return S
+```
+
+```
+def RGA(iterate, arr):
+    """
+    RGA - Random Generation Algorithm in order to generate a byte array to be XOR'ed with the plaintext
+        Dependencies:
+            KSA(key) to get the permutation array of byte encoding of the key
+        Arguments:
+            iterate - number of values to be generated in the byte array
+            arr - the identity permutation from the KSA
+        Algorithm:
+            For iterates number of times, adds S[i] to j and swaps S[i] with S[j] and uses a separate value
+            from S from the keystream.
+        Return:
+            answer - byte array to be XOR'ed
+    """
+
+    i = 0
+    j = 0
+    index = 0
+    answer = []
+    while index < iterate:
+        i = (i + 1) % 256
+        j = (j + arr[i]) % 256
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+        k = arr[(arr[i] + arr[j]) % 256]
+        answer.append(k)
+        index += 1
+    return answer
+```
+![PRGA Algorithm](presentation/PRGA.png)
 
 ---
 ### Drawbacks of RC4
@@ -58,5 +123,3 @@ Despite these vulnerabilities, RC4 is still used in some programs/protocols, ope
 The RC4 cipher exemplifies one of the most elegant ciphers developed, one that was once widely used/considered secure. It had (and still has) a great impact on modern encryption and cybersecurity.
 
 ---
-## Links
-[Making Beautiful Markdown](https://ghost.org/changelog/markdown/)
