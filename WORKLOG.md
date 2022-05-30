@@ -40,7 +40,7 @@ types for arrays.
 #### 5/27-5/30
 **Jerry:** Finished presentation and homework assignment.
 
-**Deven:** Created file structure for homework scavenger using bash script run.sh.
+**Deven:** Created file structure for homework scavenger using bash script run.sh. Testing finished HW assignment. 
 
 ## References and Resources
 * Wikipedia: (https://en.wikipedia.org/wiki/RC4)
